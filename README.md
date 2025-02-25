@@ -9,7 +9,7 @@ git clone git@github.com:xuantongliu220/csp-demo.git
 ## Install dependencies
 
 ```bash
-npm i 
+npm install
 ```
 
 ## Build the project
@@ -42,7 +42,7 @@ npm run build
 npx serve dist
 ```
 
-## Use `unsafe-eval`
+## Turn on `unsafe-eval`
 
 `Modify dist/serve.json to allow 'unsafe-eval', which allows the app to work without errors. However, this is not the desired solution. We would rather avoid using 'unsafe-eval' for security reasons, so we want the AsyncAPI parser to run without the dependency on 'unsafe-eval'.`
 

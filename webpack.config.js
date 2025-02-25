@@ -24,9 +24,9 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/, 
-        use: ['style-loader', 'css-loader'],
-      },
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },      
     ],
   },
   resolve: {
@@ -39,6 +39,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    new MiniCssExtractPlugin({ 
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
   devServer: {
